@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLUE CAR WASH</title>
+
+  <!-- ✅ AOS CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #003d99;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('hero-image.jpg') no-repeat center/cover;
+      color: white;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 0 0 5px #000;
+      animation: fadeIn 2s ease-in-out;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .advantages {
+      background-color: #e6f0ff;
+      border-left: 10px solid #003d99;
+      padding: 20px;
+    }
+    .advantages h2 {
+      color: #003d99;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: #fff;
+    }
+
+    .product:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .testimonial {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      width: 280px;
+    }
+
+    footer {
+      background-color: #003d99;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .kakao-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 5px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 100;
+    }
+
+    .kakao-chat img {
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .products, .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product, .card, .testimonial {
+        width: 90%;
+      }
+      .hero {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><img src="logo2.png" alt="BLUE CAR WASH" height="40"></div>
+    <nav>
+      <a href="#about">회사소개</a>
+      <a href="#products">제품소개</a>
+      <a href="#cases">납품사례</a>
+      <a href="#contact">문의하기</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
+    <h2>한국에 상륙하다</h2>
+  </section>
+
+  <section class="section advantages" data-aos="fade-right">
+    <h2>OUR ADVANTAGES</h2>
+    <ul>
+      <li>생산·조립 100% 국내 대응</li>
+      <li>빠른 A/S 및 상담 서비스</li>
+      <li>ASIA WASH 본사 정품 식임</li>
+    </ul>
+  </section>
+
+  <section class="section" id="products">
+    <h2 style="text-align:center; margin-bottom: 40px;" data-aos="fade-up">제품 소개</h2>
+    <div class="products">
+      <div class="product" data-aos="zoom-in">
+        <img src="carwash-model.png" alt="모델 1">
+        <h3>MODEL 1: 롤오버</h3>
+        <p>견고한 설계와 세척 성능을 자랑하는 롤오버 시스템.</p>
+      </div>
+      <div class="product" data-aos="zoom-in" data-aos-delay="100">
+        <img src="carwash-model2.jpg" alt="모델 2">
+        <h3>MODEL 2: 드라이브스루</h3>
+        <p>고속 처리 가능한 자동 세차 시스템, 공간 활용 최적화.</p>
+      </div>
+      <div class="product" data-aos="zoom-in" data-aos-delay="200">
+        <img src="carwash-model3.jpg" alt="모델 3">
+        <h3>MODEL 3: 컴팩트 터널</h3>
+        <p>소형 공간에도 적합한 연속 세차 시스템.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cases">
+    <h2 style="text-align:center; font-size:28px; margin-bottom:30px;" data-aos="fade-up">납품 사례</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <img src="delivery1.jpg" alt="납품사례1">
+        <div class="card-body">
+          <strong>서울 강서구 ○○세차장</strong>
+          <p>TSUNAMI 360 설치 완료 (2024년 12월)</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="delivery2.jpg" alt="납품사례2">
+        <div class="card-body">
+          <strong>부산 해운대 ○○○</strong>
+          <p>롤오버 타입 설치 및 교육 진행</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="videos">
+    <h2 style="text-align:center; font-size:28px; margin-bottom:30px;" data-aos="fade-up">소개 및 시연 영상</h2>
+    <div class="cards" style="flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <iframe data-aos="fade-up" width="360" height="202" src="https://www.youtube.com/embed/eDnSD5eq0ts" title="TSUNAMI 소개 영상" frameborder="0" allowfullscreen></iframe>
+      <iframe data-aos="fade-up" data-aos-delay="100" width="360" height="202" src="https://www.youtube.com/embed/1G15pY3h2HI" title="TSUNAMI 작동 시연 1" frameborder="0" allowfullscreen></iframe>
+      <iframe data-aos="fade-up" data-aos-delay="200" width="360" height="202" src="https://www.youtube.com/embed/ZNNLs4qIaRs" title="TSUNAMI 작동 시연 2" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2 style="text-align:center; font-size:28px; margin-bottom:30px;">고객 후기</h2>
+    <div class="cards">
+      <div class="testimonial" data-aos="fade-right">
+        <p>🗣️ “설치 후 손님 반응이 너무 좋습니다. 유지관리도 간편해요.”</p>
+        <p style="font-size: 14px; color: #888;">– 경기 수원 ○○자동세차 대표님</p>
+      </div>
+      <div class="testimonial" data-aos="fade-left">
+        <p>🗣️ “A/S도 빠르고, 국산이라 믿고 설치했어요.”</p>
+        <p style="font-size: 14px; color: #888;">– 대구 ○○○○</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="background-color: #eef4fb;" data-aos="fade-up">
+    <h2 style="text-align:center; font-size:28px; margin-bottom:30px;">A/S 및 고객지원</h2>
+    <div style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.6; color: #333;">
+      <ul>
+        <li>전국 A/S망 구축으로 빠른 대응 가능</li>
+        <li>평일 오전 9시 ~ 오후 6시 / 주말 및 공휴일 제외</li>
+        <li>대표전화: <strong>02-4234-6575</strong></li>
+        <li>카카오톡 상담도 가능합니다 (우측 하단 버튼 클릭)</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    BLUE CAR WASH | 서울특별시 강서구 공항대로 000 | 전화: 02-4234-6575<br>
+    © 2025 BLUE CAR WASH. All rights reserved.
+  </footer>
+
+  <div class="kakao-chat">
+    <img src="kakao.png" alt="카카오톡 아이콘">
+    <span>카카오톡 상담</span>
+  </div>
+
+  <!-- ✅ AOS JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // 타이핑 효과
+    const text = "세계가 인정한 자동세차 시스템,";
+    const typedText = document.querySelector(".typed-text");
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        typedText.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 80);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
