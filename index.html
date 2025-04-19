@@ -303,17 +303,22 @@
     AOS.init();
 
     // 타이핑 효과
-    const text = "세계가 인정한 자동세차 시스템,";
+    const text = "세계가 인정한 자동세차 시스템";
     const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
     let index = 0;
+
     function type() {
       if (index < text.length) {
         typedText.textContent += text.charAt(index);
         index++;
         setTimeout(type, 80);
+      } else {
+        cursor.style.display = "none"; // ✅ 타이핑 완료 시 커서 숨김
       }
     }
     type();
+
   </script>
 </body>
 </html>
